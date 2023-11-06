@@ -1,7 +1,3 @@
-# This dataset contains a list of video games dating from 1980 to 2023,
-# it also provides things such as release dates, user review rating, and critic review rating.
-
-#Засчет библиотеки Matplotlib мы узнаем, что игр в жанре Adventure намного больше, чем игр в любом другом жанре. Проверим эту запись библиотекой Pandas
 
 #Подключение библиотек
 import matplotlib.pyplot as plt
@@ -46,8 +42,8 @@ dataset = dataset[dataset['Popularity'] >= 90]
 dataset.plot.bar(x='Genre', y='Popularity')
 plt.xlabel('Genre')
 plt.ylabel('Popularity')
-
 plt.show()
+
 # СSV файл в котором хранятся жанры и их популярность
 output_file = 'popularity.csv'
 dataset.to_csv(output_file, index=False)
